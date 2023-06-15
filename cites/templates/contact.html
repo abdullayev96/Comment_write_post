@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+      <div class="container">
+              <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group my-2">
+                            <input class="form-control" style="height: 50px" name="name" type="text"
+                                placeholder="Ismingzni kiriting *" data-sb-validations="required" />
+                        </div>
+
+                        <div class="form-group my-2">
+                            <input class="form-control" style="height: 50px" name="email" type="text"
+                                placeholder="Email kiriting *" data-sb-validations="required" />
+                        </div>
+                        <div class="form-group my-2">
+                            <input class="form-control" style="height: 50px" name="number" type="text"
+                                placeholder="Nomerizni kiriting*" data-sb-validations="required" />
+                        </div>
+                        <div class="form-group my-2 ">
+                            <textarea class="form-control" name="message" style="height: 183px"
+                                placeholder="Xabaringzni yozing *" data-sb-validations="required"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-md">Yuborish</button>
+                    </form>
+      </div>
+{% endblock %}
